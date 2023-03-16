@@ -2,8 +2,11 @@ package main
 
 import (
 	"flag"
+	"log"
 	"net"
+	"os"
 
+	"aqwari.net/net/styx"
 	"github.com/lemondevxyz/afero9p"
 	"github.com/spf13/afero"
 )

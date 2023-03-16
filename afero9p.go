@@ -1,7 +1,6 @@
 package afero9p
 
 import (
-	"fmt"
 	"net"
 	"time"
 	"sync"
@@ -72,14 +71,12 @@ func (s Server) StyxServer() *styx.Server {
 					f.Close()
 				case styx.Ttruncate:
 					f, err := s.Fs.OpenFile(t.Path(), os.O_WRONLY, 0755)
-					fmt.Println(t.Path(), f, err)
 					if err != nil {
 						t.Rtruncate(err)
 						return
 					}
 
 					err = f.Truncate(t.Size)
-					fmt.Println(t.Size, err)
 					t.Rtruncate(err)
 					f.Close()
 				case styx.Tutimes:
