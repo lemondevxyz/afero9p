@@ -11,4 +11,6 @@ Some cool languages, like Common Lisp, have very shotty library support. The sol
 
 How? Make a go abstraction that makes developing filesystems easy(afero). Export filesystems through a battle tested simple protocol (9p).
 
-You might be saying: "What if my language doesn't support 9p?" - I'd tell you either support it or mount that 9p filesystem through FUSE. Because FUSE is too linux dependent and 9p is almost universal.
+You might be saying: "What if my language doesn't support 9p?" - I'd tell you either support it or mount that 9p filesystem through FUSE or your OS' equivalent.
+
+"Why not FUSE?" - because universality is cool.
