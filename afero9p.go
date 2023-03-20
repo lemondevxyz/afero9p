@@ -103,8 +103,5 @@ type ServerOptions struct {
 }
 
 func NewServer(options ServerOptions, fs afero.Fs) error {
-	return Server{Fs: &openFs{
-		Fs: fs,
-		cache: map[string]afero.File{},
-		mtx: sync.Mutex{},}, Options: options}.StyxServer().Serve(options.Listener)
+	return Server{Fs: fs, Options: options}.StyxServer().Serve(options.Listener)
 }

@@ -17,6 +17,8 @@ func main() {
 	debug := flag.Bool("debug", false, "trace 9p messages")
 	verbose := flag.Bool("verbose", false, "print extra info")
 
+	flag.Parse()
+
 	ln, err := net.Listen(*mode, *addr)
 	if err != nil {
 		panic(err)
