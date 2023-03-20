@@ -3,7 +3,6 @@ package afero9p
 import (
 	"net"
 	"time"
-	"sync"
 	"os"
 
 	"aqwari.net/net/styx"
